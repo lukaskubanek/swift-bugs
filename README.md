@@ -15,4 +15,4 @@ This is a collection of bugs in Swift I encountered during my development advent
 
 - A bug where downcasting in a protocol hierarchy causes memory leaks.
 - → see the [code](SwiftProtocolCastMemoryLeak/Sources/)
-- The bug is still present.
+- The bug is still present in Swift 2.1 (Xcode 7.1).
