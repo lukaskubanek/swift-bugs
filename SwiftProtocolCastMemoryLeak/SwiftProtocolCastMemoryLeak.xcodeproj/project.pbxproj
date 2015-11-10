@@ -12,6 +12,7 @@
 		80301BDF1BF1F67C003FD7FA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80301BDD1BF1F67C003FD7FA /* MainMenu.xib */; };
 		80301BEA1BF202F5003FD7FA /* DiamondHierarchyExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80301BE91BF202F5003FD7FA /* DiamondHierarchyExample.swift */; };
 		80301BEC1BF20307003FD7FA /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80301BEB1BF20307003FD7FA /* Example.swift */; };
+		80301BEE1BF2047E003FD7FA /* DeepHierarchyExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80301BED1BF2047E003FD7FA /* DeepHierarchyExample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		80301BE01BF1F67C003FD7FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80301BE91BF202F5003FD7FA /* DiamondHierarchyExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiamondHierarchyExample.swift; sourceTree = "<group>"; };
 		80301BEB1BF20307003FD7FA /* Example.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
+		80301BED1BF2047E003FD7FA /* DeepHierarchyExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepHierarchyExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				80301BD91BF1F67C003FD7FA /* AppDelegate.swift */,
 				80301BEB1BF20307003FD7FA /* Example.swift */,
+				80301BED1BF2047E003FD7FA /* DeepHierarchyExample.swift */,
 				80301BE91BF202F5003FD7FA /* DiamondHierarchyExample.swift */,
 			);
 			path = Sources;
@@ -144,6 +147,7 @@
 			files = (
 				80301BDA1BF1F67C003FD7FA /* AppDelegate.swift in Sources */,
 				80301BEA1BF202F5003FD7FA /* DiamondHierarchyExample.swift in Sources */,
+				80301BEE1BF2047E003FD7FA /* DeepHierarchyExample.swift in Sources */,
 				80301BEC1BF20307003FD7FA /* Example.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
