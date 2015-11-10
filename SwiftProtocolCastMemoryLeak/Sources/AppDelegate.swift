@@ -14,7 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window: NSWindow!
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        DeepHierarchyExample().execute()
+        DeepHierarchyExample(useWorkaround: false).execute()
         DiamondHierarchyExample().execute()
     }
     

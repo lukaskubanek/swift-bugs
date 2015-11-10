@@ -12,12 +12,31 @@
 
 internal final class DeepHierarchyExample: Example {
     
+    internal init(useWorkaround: Bool = false) {
+        self.useWorkaround = useWorkaround
+    }
+    
+    internal let useWorkaround: Bool
+    
     internal func execute() {
         // Construct an instance whose type is set to the base protocol.
         let instance: Base = Concrete1(value: "X")
         
-        // Conditionally downcast the instance to a concrete struct.
-        if let castedConcreteInstance = instance as? Concrete2 {
+        if !useWorkaround {
+            // Conditionally downcast the instance to a concrete struct.
+            if let castedConcreteInstance = instance as? Concrete2 {
+                print(castedConcreteInstance)
+            }
+        } else {
+            // Conditionally downcast the instance to an additional protocol which is inserted to the hierarchy
+            // and implemented *only* by `Concrete2`. This check garantees that the variable can contain only
+            // instances of `Concrete2`.
+            guard let castedIntermediateInstance = instance as? IntermediateForConcrete2 else { return }
+            
+            // If we know that the variable contains an instance of `Concrete2` we can conditionally cast it
+            // to its proper type without causing a memory leak.
+            guard let castedConcreteInstance = castedIntermediateInstance as? Concrete2 else { return }
+            
             print(castedConcreteInstance)
         }
     }
@@ -60,3 +79,10 @@ private struct Concrete2: Intermediate {
     
 }
 
+// ======================================================= //
+// MARK: - Workaround Extensions
+// ======================================================= //
+
+private protocol IntermediateForConcrete2: Intermediate {}
+
+extension Concrete2: IntermediateForConcrete2 {}
